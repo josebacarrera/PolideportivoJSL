@@ -17,48 +17,48 @@
     <title>Actividad</title>
   </head>
   
-  <%  Actividad actividad = (Actividad)request.getAttribute("actividad"); 	%>
+    <% Actividad actividad = (Actividad)request.getAttribute("actividad"); %>	
 
 	<div class="container mt-2 rounded border border-dark">
 		<div class="row">
 			<div class="col">
-				<h1 class="text-center"><%=actividad.getNombre()%></h1>
+				<h1 class="text-center">${actividad.getNombre()}</h1>
 			</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="col text-center font-weight-bold">Fecha Inicio</div>
-			<div class="col text-center font-weight-bold"><%=actividad.getFecha_inicio()%></div>
+			<div class="col text-center font-weight-bold">${actividad.getFecha_inicio()}</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="col text-center font-weight-bold">Dias Semana</div>
-			<div class="col text-center font-weight-bold"><%=actividad.getDias()%></div>
+			<div class="col text-center font-weight-bold">${actividad.getDias()}</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="col text-center font-weight-bold">Horas</div>
-			<div class="col text-center font-weight-bold"><%=actividad.getHoras()%></div>
+			<div class="col text-center font-weight-bold">${actividad.getHoras()}</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="col text-center font-weight-bold">Max Participantes</div>
-			<div class="col text-center font-weight-bold"><%=actividad.getMaxParticipantes()%></div>
+			<div class="col text-center font-weight-bold">${actividad.getMaxParticipantes()}</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="col text-center font-weight-bold">Precio</div>
-			<div class="col text-center font-weight-bold"><%=actividad.getPrecio()%> Eur</div>
+			<div class="col text-center font-weight-bold">${actividad.getPrecio()} Eur</div>
 		</div>
 		<br>
 		<br>
 		<div class="row">
 		
 			<div class="col text-center font-weight-bold">
-				<a class="btn btn-secondary" href="EditarActividad?id=<%=actividad.getId()%>">Editar</a>
+				<a class="btn btn-secondary" href="EditarActividad?id=${actividad.getId()}">Editar</a>
 			</div>
 			<div class="col text-center font-weight-bold">
-				<a class="btn btn-danger" href="ElimnarActividad?id=<%=actividad.getId()%>">Eliminar</a>
+				<a class="btn btn-danger" href="ElimnarActividad?id=${actividad.getId()}">Eliminar</a>
 			</div>
 			    
 		</div>
